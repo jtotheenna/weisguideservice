@@ -71,9 +71,42 @@ export default function Hero() {
           Guided fishing trips with experience you can trust
         </p>
 
-        <p style={{ opacity: 0.9, fontSize: "1rem", marginBottom: "18px" }}>
+        <p style={{ opacity: 0.9, fontSize: "1rem", marginBottom: "28px" }}>
           Peterson, Minnesota
         </p>
+
+        {/* GLASS CTA BUTTON */}
+        <a
+          href="tel:+15076061002"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "8px",
+            padding: "14px 36px",
+            borderRadius: "999px",
+            background: "rgba(255, 255, 255, 0.15)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1.5px solid rgba(255, 255, 255, 0.35)",
+            color: "#ffffff",
+            fontSize: "1rem",
+            fontWeight: 600,
+            textDecoration: "none",
+            letterSpacing: "0.02em",
+            transition: "background 0.2s ease, border-color 0.2s ease",
+            marginBottom: "28px"
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.25)";
+            (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.55)";
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.15)";
+            (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.35)";
+          }}
+        >
+          Book a Trip
+        </a>
 
         {/* LOGO */}
         <img
